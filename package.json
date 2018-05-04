@@ -1,0 +1,22 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "a burger logger with MYSQL, NODE, Express, Handlebars, and an ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhint24/burger.git"
+  },
+  "author": "Josh Hinton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jhint24/burger/issues"
+  },
+  "homepage": "https://github.com/Jhint24/burger#readme",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
+}
