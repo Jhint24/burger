@@ -28,7 +28,9 @@ router.post("/api/burgers", function(req, res)  {
 
 //update a burger
 router.put("/api/burgers/:id", function(req, res)   {
-    var condition = "id = " + req.params.id;
+    var condition = {
+        id: req.params.id
+    };
     console.log("condition", condition);
 
     burger.updateOne({
@@ -39,7 +41,7 @@ router.put("/api/burgers/:id", function(req, res)   {
             return res.status(404).end();
         }
         else {
-            res.statusCode(200).end();
+            res.status(200).end();
         }
     });
 });

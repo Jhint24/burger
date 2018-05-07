@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var handleBars = require("handlebars");
 var exphbs = require("express-handlebars");
 var path = require("path");
 var routes = require("./controllers/burgers_controller.js");
