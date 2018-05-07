@@ -3,9 +3,9 @@ Create a button in index.handlebars that will submit the user input into the dat
 <div class = "container">
   <div class = "row">
     
-    <div class = "col-6">
+    <div class = "col-6" style="text-align:center">
       <div id="available-burger">
-        <h2>Eat Da Burger!</h2>
+        <h2 style="text-align:center">Eat Da Burger!</h2>
         <ul>
           {{#each burger}}
             {{#unless devoured}}
@@ -16,9 +16,9 @@ Create a button in index.handlebars that will submit the user input into the dat
       </div>
     </div>
     
-    <div class = "col-6">
+    <div class = "col-6" style="text-align:center">
       <div id="devoured-burger">
-        <h2>All Gone!</h2>
+        <h2 style="text-align:center">All Gone!</h2>
         <ul>
           {{#each burger}}
             {{#if devoured}}
@@ -29,5 +29,22 @@ Create a button in index.handlebars that will submit the user input into the dat
       </div>
     </div>
 
+  </div>
+
+  <div class="row">
+    <div class="col-12" style="text-align:center">
+      
+<div id="burger-form-div">
+  <form class="create-new-burger">
+    <h2>Grilling Station</h2>
+    <h3 id="error-message"></h3>
+    <div class="form-group" >
+      <label for="burger-name">Build a New Burger:</label>
+      <input type="text" id="burger-name" name="name">
+    </div>
+    <button type="submit" id="build-burger-button">Grill!</button>
+  </form>
+</div>
+    </div>
   </div>
 </div>
