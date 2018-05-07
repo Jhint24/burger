@@ -7,6 +7,7 @@ var orm = {
         connection.query(queryString, [tableInput], function(err, result)   {
             if (err) throw err;
             console.log(result)
+            //one of the 3 cbs called (Trev)
             cb(result);
         });
     
