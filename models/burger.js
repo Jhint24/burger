@@ -23,4 +23,4 @@ var burger = {
 };
 //Export for controller
 
-module.exports = burgers;
+module.exports = burger;
