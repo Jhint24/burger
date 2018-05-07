@@ -1,8 +1,33 @@
 <!--Setup the index.handlebars to have the template that Handlebars can render onto.
 Create a button in index.handlebars that will submit the user input into the database.-->
-<ul>
-  {{#each burger}}
-    {{#unless devoured}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class = "container">
+  <div class = "row">
+    
+    <div class = "col-6">
+      <div id="available-burger">
+        <h2>Eat Da Burger!</h2>
+        <ul>
+          {{#each burger}}
+            {{#unless devoured}}
+              {{> burgers/burger-block devoured=false}}
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    
+    <div class = "col-6">
+      <div id="devoured-burger">
+        <h2>All Gone!</h2>
+        <ul>
+          {{#each burger}}
+            {{#if devoured}}
+              {{> burgers/burger-block devoured=true}}
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
