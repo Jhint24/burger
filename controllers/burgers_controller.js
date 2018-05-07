@@ -15,3 +15,16 @@ router.get("/", function(req, res)  {
   });  
 });
 
+//post to db
+router.post("/api/burgers", function(req, res)  {
+    burger.create(["burger_name", "devoured"],
+    [
+        req.body.name, req.body.devoured
+    ], function(result)   {
+        //send back the id
+        res.json({ id: result.insertId});
+    });
+});
+
+//update a burger
+
