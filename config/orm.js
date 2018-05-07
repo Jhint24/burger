@@ -20,7 +20,14 @@ var orm = {
         });
     },
 
-    updateOne: function(table, )
+    updateOne: function(table, objColVals, condition, cb)   {
+        var queryString = "UPDATE ?? SET ? WHERE ?";
+        connection.query(queryString, [table, objColVals, condition], function(err, result) {
+            if (err) throw err;
+            console.log(result);
+            cb(result);
+        });
+    }
 }
 
 module.exports = orm;
