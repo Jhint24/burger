@@ -1,20 +1,34 @@
 var connection = require("../config/connection.js");
 
-function selectAll()    {
+var orm = {
 
-};
-
-function insertOne()    {
-
-};
-
-function updateOne()    {
-
-};
-
-
-
-
-
+    selectAll: function(tableInput, cb) {
+        var queryString = "SELECT * FROM ??;";
+        connection.query(queryString, [tableInput], function(err, result)   {
+            if (err) throw err;
+            console.log(result)
+            cb(result);
+        });
+    },
+    insertOne: function()   {}
+}
 
 module.exports = orm;
+
+
+
+
+
+
+
+// function selectAll()    {
+
+// };
+
+// function insertOne()    {
+
+// };
+
+// function updateOne()    {
+
+// };
