@@ -2,9 +2,9 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "a burger logger with MYSQL, NODE, Express, Handlebars, and an ORM",
-  "main": "./server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/Jhint24/burger#readme",
   "dependencies": {
-    "mysql": "^2.15.0",
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "mysql": "^2.15.0",
+    "orm": "^4.0.2"
   }
 }
