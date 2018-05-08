@@ -21,12 +21,16 @@ $(document).ready(function()   {
             // Make sure to preventDefault on a submit event.
     event.preventDefault();
     
-
+    var validate = $("#burger-name").val().trim();
     var newBurger = {
       burger_name: $("#burger-name").val().trim()
     };
     console.log(newBurger);
     // Send the POST request.
+    if(validate === '' ){
+        $('#error-message').text("Please Enter a Name for Your Burger");
+        return;
+    }
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
